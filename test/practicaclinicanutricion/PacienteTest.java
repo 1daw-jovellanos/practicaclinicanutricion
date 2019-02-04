@@ -169,7 +169,7 @@ public class PacienteTest {
         Visita v3 = new Visita(LocalDate.of(2020, 4, 4), "Dr. Cito", "Un comentario", 82);
         boolean hayExcepcion = false;
         try {
-            p1.annadirVisita(v2);
+            p1.annadirVisita(v3);
         } catch (IllegalArgumentException ex) {
             hayExcepcion = true;
         }
@@ -261,13 +261,11 @@ public class PacienteTest {
 
     
     /**
-     * Calcula la diferencia entre dos cadenas, como un porcentaje, utilizando el algoritmo de
+     * Calcula la diferencia entre dos cadenas, utilizando el algoritmo de
      * levenshtein, que obtiene la distanticia entre dos cadenas, entendida como la cantidad de
-     * caracteres que hay que cambiar, eliminar o añadir en una para obtener la otra. Más info:
-     * http://goo.gl/z3woFI
-     *
-     * @return un número entre o y 100, que indica el porcentaje de diferencia entre la cadena s1 y
-     * la s2. 0=iguales 100=hay que cambiar el 100% de s1 para obtener s2
+     * caracteres que hay que cambiar, eliminar o añadir en una para obtener la otra. 
+     * 
+     * @return La distancia de Levenshtein: el número de cambios de una cadena a otra
      * @param s1 La cadena de la que se parte
      * @param s2 La cadena con la que se quiere comparar
      */
