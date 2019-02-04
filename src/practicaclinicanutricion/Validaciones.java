@@ -18,7 +18,7 @@ public class Validaciones {
             return false;
         }
         int modulo = Integer.parseInt(dniMayuscula.substring(0, dniMayuscula.length() - 1)) % 23;
-        System.err.println(letras.charAt(modulo));
+        // System.err.println(letras.charAt(modulo));
         return letras.charAt(modulo) == dniMayuscula.charAt(dniMayuscula.length()-1);
     }
 
